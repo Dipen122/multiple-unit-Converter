@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Document</title>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <section id="home">
+        <header>
+          Unit Conversions
+        </header>
+        <nav>
+          <div class="topdiv">
+            <a href="#temperature"><button  class="topmenu">Temperature</button></a>
+            <a href="#weight"><button  class="topmenu">Weight</button></a>
+            <a href="#distance"><button  class="topmenu">Distance</button></a>
+          </div>
+        </nav>
+      </section>    
+      <div style="clear:both;"></div>
+     
+      <div id="all-conversion-sections">
+
+        <section id="temperature"  class="b temperature">
+          <div id="tmp">
+            <figure>
+              <img src="assets\thermo.png">
+              <figcaption>Celcius to Farenheit Conversion</figcaption>
+            </figure>
+            <article> 
+
+              <fieldset>
+                <legend>Temperature</legend>
+                <label for="celsius">Celsius</label> <br/>
+                <input type="number" id="celsius"> <br/>
+                <button  onclick="temperature()"> Convert </button> <br/>
+                <input type="number" id="fahrenheit"> <br/>
+                <label for="fahrenheit">Fahrenheit</label>
+              </fieldset>
+              <aside id="temp-msg1">
+                Enter temperature in Degree to convert in Farenheit
+              </aside>
+            </article>
+          </div>
+        </section>
+
+        <div style="clear:both;"></div>
+      
+        <section id="weight"  class="b weight">          
+          <div id="wgt">
+            <figure>
+              <img src="assets/weight.png"  width="150px"/>
+              <figcaption>Kilograms to Pound Conversion</figcaption>
+            </figure>
+            <article>
+              <fieldset>
+                <legend>Weight</legend>
+                <label for="kilo">KG</label><br/>
+                <input type="number" id="kilo"> <br/>
+                <button onclick="weight()"> Convert </button><br/> 
+                <input type="number" id="pounds">  <br/>
+                <label for="pounds">Pounds</label>    
+              </fieldset>
+              <aside id="temp-msg2">
+                Enter kilograms to Convert into pounds.
+              </aside>      
+            </article>
+          </div>
+        </section>
+
+        <div style="clear:both;"></div>
+
+        <section id="distance"  class="b distance">
+          <div id="dst">
+            <figure>
+              <img src="assets/speedo.png"  width="150px"/>
+              <figcaption>Kilometers to Miles Conversion</figcaption>
+            </figure>
+            <article>
+              <fieldset>
+                <legend>Distance</legend>
+                <label for="km">KM</label> <br/>
+                <input type="number" id="km">  <br/>
+                <button onclick="distance()"> Convert </button> <br/>
+                <input type="number" id="miles">  <br/>
+                <label for="miles">Miles</label>
+              </fieldset>
+              <aside id="temp-msg3">
+              Enter kilometers to convert into miles.
+              </aside>
+    
+            </article>
+          </div>
+        </section>
+        <div style="clear:both;"></div>
+
+      </div>
+
+    <div id="go-home" class="iconbutton">
+      <a href="#home">
+        <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-CD0101EN-SkillsNetwork/labs/Theia%20Labs/02%20-%20HTML5%20Elements/images/home.svg"/>
+      </a>
+    </div>
+
+    <footer>Learn more about HTML and CSS as a part of IBM Fullstack Cloud Developer Certification</footer>
+    <script src="script.js"></script>
+    <script>
+    if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("sw.js").then(() => console.log("Service Worker Registered")).catch(err => console.log("SW error", err));
+    }
+</script>
+
+  </body>
+</html>
